@@ -7,7 +7,7 @@ class Package extends Component {
         return (
           <div key={npm.title}>
             <h3>
-              <a href={npm.link} target="_blank">
+              <a href={npm.link} target="_blank" rel="noopener noreferrer">
                 {" "}
                 {npm.title}
               </a>
