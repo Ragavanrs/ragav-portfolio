@@ -1,136 +1,131 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Contact = ({ data }) => {
-  const [url, setUrl] = useState(
-    "mailto:test@example.com?subject=subject&body=body"
-  );
-  const [name, setName] = useState("");
-  const [subject, setSubject] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name,    setName]    = useState('');
+  const [subject, setSubject] = useState('');
+  const [email,   setEmail]   = useState('');
+  const [message, setMessage] = useState('');
+  const [sent,    setSent]    = useState(false);
 
-  console.log(data);
-
-  const handleClick = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     window.open(
-      `mailto:${`ragavan.rs12@gmail.com`}?subject=${subject}&body=${name}: ${message}`
+      `mailto:ragavan.rs12@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(name + ': ' + message)}`
     );
-    //handle clear
-    setName("");
-    setSubject("");
-    setEmail("");
-    setMessage("");
+    setName(''); setSubject(''); setEmail(''); setMessage('');
+    setSent(true);
+    setTimeout(() => setSent(false), 4000);
   };
 
   return (
-    <section id="contact">
-      <div className="row section-head">
-        <div className="two columns header-col">
-          <h1>
-            <span>Get In Touch.</span>
-          </h1>
+    <section id="contact" className="pf-section pf-section-alt">
+      <div className="pf-container">
+        <div className="pf-section-header reveal">
+          <span className="pf-section-label">Get In Touch</span>
+          <h2 className="pf-section-title">Let's build something great</h2>
+          <div className="pf-divider"></div>
+          <p className="pf-section-desc">
+            {data?.contactmessage || 'Open to senior engineering roles, tech-lead positions, and interesting projects.'}
+          </p>
         </div>
 
-        <div className="ten columns">
-          <p className="lead">{data?.message}</p>
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="eight columns">
-          <form id="contactForm" name="contactForm">
-            <fieldset>
-              <div>
-                <label htmlFor="contactName">
-                  Name <span className="required">*</span>
-                </label>
-                <input
-                  value={name}
-                  type="text"
-                  defaultValue=""
-                  size="35"
-                  id="contactName"
-                  name="contactName"
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="contactEmail">
-                  Email <span className="required">*</span>
-                </label>
-                <input
-                  value={email}
-                  type="text"
-                  defaultValue=""
-                  size="35"
-                  id="contactEmail"
-                  name="contactEmail"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="contactSubject">Subject</label>
-                <input
-                  value={subject}
-                  type="text"
-                  defaultValue=""
-                  size="35"
-                  id="contactSubject"
-                  name="contactSubject"
-                  onChange={(e) => setSubject(e.target.value)}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="contactMessage">
-                  Message <span className="required">*</span>
-                </label>
-                <textarea
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  cols="50"
-                  rows="15"
-                  id="contactMessage"
-                  name="contactMessage"
-                ></textarea>
-              </div>
-
-              <div>
-                <button type="submit" onClick={handleClick} className="submit">
-                  Submit
+        <div className="row g-4 reveal">
+          {/* Contact Form */}
+          <div className="col-12 col-lg-7">
+            <div className="pf-contact-form-wrap">
+              <form onSubmit={handleSubmit}>
+                <div className="row g-3">
+                  <div className="col-12 col-sm-6">
+                    <div className="pf-form-group">
+                      <label className="pf-form-label">Name *</label>
+                      <input type="text" className="pf-form-control" value={name}
+                        onChange={e => setName(e.target.value)} placeholder="Your name" required />
+                    </div>
+                  </div>
+                  <div className="col-12 col-sm-6">
+                    <div className="pf-form-group">
+                      <label className="pf-form-label">Email *</label>
+                      <input type="email" className="pf-form-control" value={email}
+                        onChange={e => setEmail(e.target.value)} placeholder="your@email.com" required />
+                    </div>
+                  </div>
+                </div>
+                <div className="pf-form-group">
+                  <label className="pf-form-label">Subject</label>
+                  <input type="text" className="pf-form-control" value={subject}
+                    onChange={e => setSubject(e.target.value)} placeholder="What's this about?" />
+                </div>
+                <div className="pf-form-group">
+                  <label className="pf-form-label">Message *</label>
+                  <textarea className="pf-form-control" value={message} rows={6}
+                    onChange={e => setMessage(e.target.value)} placeholder="Tell me about your project..." required />
+                </div>
+                <button type="submit" className="pf-form-submit">
+                  {sent ? '✓ Message sent!' : 'Send Message'}
                 </button>
-                <span id="image-loader">
-                  <img alt="" src="images/loader.gif" />
-                </span>
-              </div>
-            </fieldset>
-          </form>
+              </form>
+            </div>
+          </div>
 
-          <div id="message-warning"> Error boy</div>
-          <div id="message-success">
-            <i className="fa fa-check"></i>Your message was sent, thank you!
-            <br />
+          {/* Sidebar */}
+          <div className="col-12 col-lg-5">
+            <div className="pf-contact-sidebar">
+              <div className="pf-contact-sidebar-title">Contact Information</div>
+
+              <div className="pf-contact-item">
+                <div className="pf-contact-item-icon"><i className="fa fa-user"></i></div>
+                <div>
+                  <div className="pf-contact-item-label">Name</div>
+                  <div className="pf-contact-item-value">{data?.name}</div>
+                </div>
+              </div>
+
+              <div className="pf-contact-item">
+                <div className="pf-contact-item-icon"><i className="fa fa-envelope"></i></div>
+                <div>
+                  <div className="pf-contact-item-label">Email</div>
+                  <div className="pf-contact-item-value">{data?.email}</div>
+                </div>
+              </div>
+
+              <div className="pf-contact-item">
+                <div className="pf-contact-item-icon"><i className="fa fa-phone"></i></div>
+                <div>
+                  <div className="pf-contact-item-label">Phone</div>
+                  <div className="pf-contact-item-value">{data?.phone}</div>
+                </div>
+              </div>
+
+              <div className="pf-contact-item">
+                <div className="pf-contact-item-icon"><i className="fa fa-map-marker"></i></div>
+                <div>
+                  <div className="pf-contact-item-label">Location</div>
+                  <div className="pf-contact-item-value">
+                    {data?.address?.city}, {data?.address?.state}
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ marginTop: '28px', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+                <div className="pf-contact-item-label mb-3">Availability</div>
+                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                  {['Senior Engineer', 'Tech Lead', 'Freelance'].map(role => (
+                    <span key={role} style={{
+                      display: 'inline-block',
+                      background: 'rgba(99,102,241,0.1)',
+                      color: '#818cf8',
+                      border: '1px solid rgba(99,102,241,0.25)',
+                      borderRadius: '6px',
+                      padding: '4px 12px',
+                      fontSize: '0.8rem',
+                      fontWeight: 600
+                    }}>{role}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <aside className="four columns footer-widgets">
-          <div className="widget widget_contact">
-            <h4>Address and Phone</h4>
-            <p className="address">
-              {data?.name}
-              <br />
-              {data?.address.street} <br />
-              {data?.address.city}, {data?.address.state} {data?.address.zip}
-              <br />
-              <span>{data?.phone}</span>
-            </p>
-          </div>
-
-          <div className="widget widget_tweets"></div>
-        </aside>
       </div>
     </section>
   );

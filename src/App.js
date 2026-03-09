@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactGA from 'react-ga';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -31,8 +31,26 @@ class App extends Component {
       .catch(err => console.error('Failed to load resume data:', err));
   }
 
+  initScrollAnimations() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+      observer.observe(el);
+    });
+  }
+
   componentDidMount() {
     this.getResumeData();
+    // Run scroll animations after a short delay to let DOM render
+    setTimeout(() => this.initScrollAnimations(), 300);
   }
 
   render() {

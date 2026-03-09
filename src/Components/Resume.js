@@ -3,107 +3,90 @@ import React, { Component } from 'react';
 class Resume extends Component {
   render() {
     let education = null;
-    let work = null;
-    let skillsContent = null;
+    let work      = null;
+    let skills    = null;
 
     if (this.props.data) {
-      education = this.props.data.education.map(function (edu) {
-        return (
-          <div key={edu.school} className="mb-4">
-            <h4 className="mb-1">{edu.school}</h4>
-            <p className="info mb-1">
-              {edu.degree} <span>&bull;</span> <em className="date">{edu.graduated}</em>
+      education = this.props.data.education.map(edu => (
+        <div key={edu.school} className="pf-edu-card">
+          <div className="pf-edu-school">{edu.school}</div>
+          <div className="pf-edu-degree">{edu.degree}</div>
+          <div className="pf-edu-date">{edu.graduated}</div>
+          {edu.description && (
+            <p style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginTop: '8px', marginBottom: 0 }}>
+              {edu.description}
             </p>
-            <p className="text-muted small">{edu.description}</p>
-          </div>
-        );
-      });
+          )}
+        </div>
+      ));
 
-      work = this.props.data.work.map(function (job) {
-        return (
-          <div key={job.company} className="work-item mb-4 p-3 rounded border-start border-primary border-3 bg-light">
-            <h4 className="mb-1">{job.company}</h4>
-            <p className="info mb-2">
-              <strong>{job.title}</strong> <span>&bull;</span> <em className="date">{job.years}</em>
-            </p>
-            <p className="text-muted small mb-0">{job.description}</p>
+      work = this.props.data.work.map(job => (
+        <div key={job.company} className="pf-timeline-item">
+          <div className="pf-timeline-dot"></div>
+          <div className="pf-timeline-card">
+            <div className="pf-exp-company">{job.company}</div>
+            <div className="pf-exp-meta">
+              <span className="pf-exp-title">{job.title}</span>
+              <span className="pf-exp-divider">•</span>
+              <span className="pf-exp-date">{job.years}</span>
+            </div>
+            <p className="pf-exp-desc">{job.description}</p>
           </div>
-        );
-      });
+        </div>
+      ));
 
       if (this.props.data.skillGroups) {
-        skillsContent = this.props.data.skillGroups.map(function (group) {
-          var badges = group.skills.map(function (skill) {
-            return (
-              <span key={skill} className="badge bg-dark me-2 mb-2 py-2 px-3" style={{ fontSize: '0.8rem' }}>
-                {skill}
-              </span>
-            );
-          });
-          return (
-            <div key={group.category} className="mb-4">
-              <h6 className="text-uppercase text-muted mb-2 fw-bold" style={{ letterSpacing: '0.08em' }}>
-                {group.category}
-              </h6>
-              <div>{badges}</div>
+        skills = this.props.data.skillGroups.map(group => (
+          <div key={group.category} className="pf-skills-group">
+            <div className="pf-skills-cat">{group.category}</div>
+            <div className="pf-skill-badges">
+              {group.skills.map(s => (
+                <span key={s} className="pf-skill-badge">{s}</span>
+              ))}
             </div>
-          );
-        });
-      } else {
-        var skills = this.props.data.skills.map(function (skill) {
-          var className = 'bar-expand ' + skill.name.toLowerCase();
-          return (
-            <li key={skill.name}>
-              <span style={{ width: skill.level }} className={className}></span>
-              <em>{skill.name}</em>
-            </li>
-          );
-        });
-        skillsContent = (
-          <div className="bars">
-            <ul className="skills">{skills}</ul>
+          </div>
+        ));
+      } else if (this.props.data.skills) {
+        skills = (
+          <div className="pf-skill-badges">
+            {this.props.data.skills.map(s => (
+              <span key={s.name} className="pf-skill-badge">{s.name}</span>
+            ))}
           </div>
         );
       }
     }
 
     return (
-      <section id="resume" className="py-5 bg-white">
-        <div className="container">
+      <section id="resume" className="pf-section pf-resume-section">
+        <div className="pf-container">
+          <div className="pf-section-header reveal">
+            <span className="pf-section-label">Resume</span>
+            <h2 className="pf-section-title">Education, Experience &amp; Skills</h2>
+            <div className="pf-divider"></div>
+            <p className="pf-section-desc">
+              5+ years building production systems across enterprise Java, cloud microservices, and modern frontend stacks.
+            </p>
+          </div>
 
-          <div className="row mb-5">
-            <div className="col-12 col-md-3 mb-3">
-              <h2 className="section-label">
-                <span>Education</span>
-              </h2>
-            </div>
-            <div className="col-12 col-md-9">
+          <div className="row g-5 reveal">
+            {/* Left column: Education + Skills */}
+            <div className="col-12 col-lg-4">
+              <div className="pf-resume-label">Education</div>
               {education}
+
+              <div className="pf-resume-label mt-4">Skills</div>
+              {skills}
+            </div>
+
+            {/* Right column: Experience timeline */}
+            <div className="col-12 col-lg-8">
+              <div className="pf-resume-label">Work Experience</div>
+              <div className="pf-timeline">
+                {work}
+              </div>
             </div>
           </div>
-
-          <div className="row mb-5">
-            <div className="col-12 col-md-3 mb-3">
-              <h2 className="section-label">
-                <span>Experience</span>
-              </h2>
-            </div>
-            <div className="col-12 col-md-9">
-              {work}
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-12 col-md-3 mb-3">
-              <h2 className="section-label">
-                <span>Skills</span>
-              </h2>
-            </div>
-            <div className="col-12 col-md-9">
-              {skillsContent}
-            </div>
-          </div>
-
         </div>
       </section>
     );
