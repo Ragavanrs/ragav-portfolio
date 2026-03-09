@@ -1,43 +1,61 @@
 import React, { Component } from 'react';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 class Portfolio extends Component {
   render() {
-
-    if(this.props.data){
-      var projects = this.props.data.projects.map(function(projects){
-        var projectImage = 'images/portfolio/'+projects.image;
-        return <div key={projects.title} className="columns portfolio-item">
-           <div className="item-wrap">
-            <a href={projects.url} title={projects.title}>
-               <img alt={projects.title} src={projectImage} />
-               <div className="overlay">
-                  <div className="portfolio-item-meta">
-                 <h5>{projects.title}</h5>
-                     <p>{projects.category}</p>
-                  </div>
+    var projects = null;
+    if (this.props.data) {
+      projects = this.props.data.projects.map(function (project) {
+        var projectImage = 'images/portfolio/' + project.image;
+        var techTags = (project.techStack || []).map(function (tech) {
+          return <span key={tech} className="portfolio-tech-tag">{tech}</span>;
+        });
+        return (
+          <div key={project.title} className="portfolio-card">
+            <div className="portfolio-card-image">
+              <img alt={project.title} src={projectImage} />
+              <div className="portfolio-overlay">
+                <div className="portfolio-overlay-links">
+                  {project.url && (
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" title="View Live">
+                      <FaExternalLinkAlt size={20} />
+                    </a>
+                  )}
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" title="View on GitHub">
+                      <FaGithub size={20} />
+                    </a>
+                  )}
                 </div>
-              <div className="link-icon"><i className="fa fa-link"></i></div>
-            </a>
+              </div>
+            </div>
+            <div className="portfolio-card-content">
+              <span className="portfolio-category">{project.category}</span>
+              <h3 className="portfolio-title">{project.title}</h3>
+              <p className="portfolio-description">{project.description}</p>
+              <div className="portfolio-tech-stack">
+                {techTags}
+              </div>
+            </div>
           </div>
-        </div>
-      })
+        );
+      });
     }
 
     return (
-      <section id="portfolio">
-
-      <div className="row">
-
-         <div className="twelve columns collapsed">
-
-            <h1>Check Out Some of My Works.</h1>
-
-            <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
-                {projects}
-            </div>
+      <section id="portfolio" className="section-portfolio">
+        <div className="row">
+          <div className="twelve columns">
+            <h2 className="section-title">Projects &amp; Works</h2>
+            <p className="section-subtitle">
+              A selection of projects that demonstrate my technical breadth and execution.
+            </p>
           </div>
-      </div>
-   </section>
+        </div>
+        <div className="portfolio-grid">
+          {projects}
+        </div>
+      </section>
     );
   }
 }
