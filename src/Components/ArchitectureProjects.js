@@ -3,30 +3,35 @@ import { FaLayerGroup } from 'react-icons/fa';
 
 class ArchitectureProjects extends Component {
   render() {
-    var projects = null;
+    let projects = null;
+
     if (this.props.data && this.props.data.projects) {
       projects = this.props.data.projects.map(function (project) {
-        var techTags = project.techStack.map(function (tech) {
-          return <span key={tech} className="tech-tag">{tech}</span>;
-        });
+        const techTags = project.techStack.map(t => (
+          <span key={t} className="pf-arch-tag">{t}</span>
+        ));
         return (
-          <div key={project.name} className="arch-card">
-            <div className="arch-card-header">
-              <FaLayerGroup size={24} className="arch-icon" />
-              <h3 className="arch-name">{project.name}</h3>
-            </div>
-            <p className="arch-architecture"><strong>Architecture:</strong> {project.architecture}</p>
-            <div className="arch-tech-stack">
-              {techTags}
-            </div>
-            <div className="arch-details">
-              <div className="arch-detail-block">
-                <h4>Challenge</h4>
-                <p>{project.challenges}</p>
+          <div key={project.name} className="col-12 col-lg-4">
+            <div className="pf-arch-card h-100">
+              <div className="pf-arch-header">
+                <div className="pf-arch-icon"><FaLayerGroup /></div>
+                <div>
+                  <div className="pf-arch-name">{project.name}</div>
+                  <div className="pf-arch-arch">{project.architecture}</div>
+                </div>
               </div>
-              <div className="arch-detail-block">
-                <h4>Outcome</h4>
-                <p>{project.outcome}</p>
+
+              <div className="pf-arch-tags">{techTags}</div>
+
+              <div className="pf-arch-details">
+                <div className="pf-arch-detail">
+                  <div className="pf-arch-detail-label pf-arch-challenge-label">Challenge</div>
+                  <p>{project.challenges}</p>
+                </div>
+                <div className="pf-arch-detail">
+                  <div className="pf-arch-detail-label pf-arch-outcome-label">Outcome</div>
+                  <p>{project.outcome}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -35,17 +40,19 @@ class ArchitectureProjects extends Component {
     }
 
     return (
-      <section id="architecture" className="section-architecture">
-        <div className="row">
-          <div className="twelve columns">
-            <h2 className="section-title">Architecture &amp; Systems</h2>
-            <p className="section-subtitle">
-              Production-grade systems designed, built, and delivered at scale.
+      <section id="architecture" className="pf-section pf-section-alt">
+        <div className="pf-container">
+          <div className="pf-section-header reveal">
+            <span className="pf-section-label">Architecture & Systems</span>
+            <h2 className="pf-section-title">Production-grade systems design</h2>
+            <div className="pf-divider"></div>
+            <p className="pf-section-desc">
+              Systems I designed, architected, and delivered — with clear challenges and measurable outcomes.
             </p>
           </div>
-        </div>
-        <div className="arch-grid">
-          {projects}
+          <div className="row g-4 reveal-stagger">
+            {projects}
+          </div>
         </div>
       </section>
     );

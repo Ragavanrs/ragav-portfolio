@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactGA from 'react-ga';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -27,8 +27,28 @@ class App extends Component {
   getResumeData() {
     fetch('/resumeData.json')
       .then(response => response.json())
-      .then(data => this.setState({ resumeData: data }))
+      .then(data => {
+        // Re-initialise scroll animations after data loads so that cards
+        // rendered by the setState re-render are also observed.
+        this.setState({ resumeData: data }, () => this.initScrollAnimations());
+      })
       .catch(err => console.error('Failed to load resume data:', err));
+  }
+
+  initScrollAnimations() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+    );
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+      observer.observe(el);
+    });
   }
 
   componentDidMount() {

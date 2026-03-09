@@ -1,46 +1,44 @@
 import React, { Component } from 'react';
 import { FaRocket, FaChartLine, FaShieldAlt, FaLayerGroup, FaCode, FaUsers } from 'react-icons/fa';
 
-const iconMap = {
-  FaRocket,
-  FaChartLine,
-  FaShieldAlt,
-  FaLayerGroup,
-  FaCode,
-  FaUsers,
-};
+const iconMap = { FaRocket, FaChartLine, FaShieldAlt, FaLayerGroup, FaCode, FaUsers };
 
 class EngineeringImpact extends Component {
   render() {
-    var achievementCards = null;
+    let cards = null;
+
     if (this.props.data && this.props.data.achievements) {
-      achievementCards = this.props.data.achievements.map(function (item) {
-        var IconComponent = iconMap[item.icon] || FaCode;
+      cards = this.props.data.achievements.map(function (item) {
+        const IconComp = iconMap[item.icon] || FaCode;
         return (
-          <div key={item.title} className="impact-card">
-            <div className="impact-icon">
-              <IconComponent size={32} />
+          <div key={item.title} className="col-12 col-sm-6 col-lg-4">
+            <div className="pf-impact-card h-100">
+              <div className="pf-impact-icon">
+                <IconComp />
+              </div>
+              <div className="pf-impact-metric">{item.metric}</div>
+              <div className="pf-impact-title">{item.title}</div>
+              <p className="pf-impact-desc">{item.description}</p>
             </div>
-            <div className="impact-metric">{item.metric}</div>
-            <h3 className="impact-title">{item.title}</h3>
-            <p className="impact-description">{item.description}</p>
           </div>
         );
       });
     }
 
     return (
-      <section id="impact" className="section-impact">
-        <div className="row">
-          <div className="twelve columns">
-            <h2 className="section-title">Engineering Impact</h2>
-            <p className="section-subtitle">
-              Real-world achievements from production systems at scale.
+      <section id="impact" className="pf-section pf-section-alt">
+        <div className="pf-container">
+          <div className="pf-section-header reveal">
+            <span className="pf-section-label">Engineering Impact</span>
+            <h2 className="pf-section-title">Real-world achievements at scale</h2>
+            <div className="pf-divider"></div>
+            <p className="pf-section-desc">
+              Measurable outcomes from production systems — migrations, optimizations, and enterprise deliveries.
             </p>
           </div>
-        </div>
-        <div className="impact-grid">
-          {achievementCards}
+          <div className="row g-4 reveal-stagger">
+            {cards}
+          </div>
         </div>
       </section>
     );

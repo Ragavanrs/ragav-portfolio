@@ -2,35 +2,42 @@ import React, { Component } from 'react';
 
 class Footer extends Component {
   render() {
+    let networks = null;
+    let name     = 'Nirmal Ragavan';
 
-    if(this.props.data){
-      var networks= this.props.data.social.map(function(network){
-        return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
-      })
+    if (this.props.data) {
+      name     = this.props.data.name;
+      networks = this.props.data.social.map(network => (
+        <a key={network.name} href={network.url} target="_blank" rel="noopener noreferrer"
+          title={network.name}>
+          <i className={network.className}></i>
+        </a>
+      ));
     }
 
+    const firstName = name ? name.split(' ')[0] : 'NR';
+
     return (
-      <footer>
+      <footer className="pf-footer">
+        <div className="pf-footer-inner">
+          <div className="pf-footer-brand">
+            {firstName}<span>.</span>
+          </div>
 
-     <div className="row">
-        <div className="twelve columns">
-           <ul className="social-links">
-              {networks}
-           </ul>
+          <div className="pf-footer-copy">
+            Built with React &amp; Bootstrap 5 — Thank you for visiting ♥
+          </div>
 
-           <ul>
-            <li>Thank You for Visiting  ♥️</li>
-           </ul>
-
-           <ul className="copyright">
-              {/* <li>&copy; - Copyright 2017 Tim Baker</li> */}
-              {/* <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li> */}
-           </ul>
-
+          <div className="pf-footer-social">
+            {networks}
+          </div>
         </div>
-        <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open"></i></a></div>
-     </div>
-  </footer>
+
+        {/* Back to top */}
+        <a href="#home" className="pf-back-top" title="Back to Top">
+          <i className="fa fa-chevron-up"></i>
+        </a>
+      </footer>
     );
   }
 }
