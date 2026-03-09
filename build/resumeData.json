@@ -1,13 +1,14 @@
 {
   "main": {
     "name": "Nirmal Ragavan",
-    "occupation": "Senior Software Engineer",
-    "description": "5+ years building scalable enterprise systems, microservices, and AI-powered applications.",
+    "occupation": "Senior Full Stack Engineer",
+    "description": "Building scalable systems and modernizing enterprise applications. Java · Spring Boot · React · Node.js · Microservices",
     "image": "ragavan.jpg",
-    "bio": "I'm Nirmal Ragavan, a Senior Software Engineer with 5 years and 5 months of hands-on experience designing and delivering enterprise-grade full-stack solutions. I specialize in Java, Spring Boot, React, Node.js, and cloud-native microservices. I have led large-scale system migrations, architected high-performance RESTful APIs, and driven production stability across distributed systems. Passionate about AI-driven developer tooling and open-source contributions.",
-    "contactmessage": "Get in touch with me to discuss projects, collaborations, or opportunities.",
+    "bio": "I'm a Senior Full Stack Engineer with 4+ years of experience building production-grade systems. I specialize in Java, Spring Boot, React.js, Node.js, and cloud-native microservices. I've led large-scale migration projects, optimized performance-critical APIs, and built SOX-compliant data pipelines. Open source contributor and freelancer passionate about developer tooling.",
+    "contactmessage": "I'm currently open to senior engineering roles, tech-lead positions, and interesting freelance projects. Let's build something great together.",
     "email": "ragavan.rs12@gmail.com",
     "phone": "+91 9840841887",
+    "githubUsername": "Ragavanrs",
     "address": {
       "street": "4/670 A, Mahalakshmi Nagar 2nd street,",
       "city": "Chennai",
@@ -30,108 +31,183 @@
         "name": "instagram",
         "url": "https://www.instagram.com/ragav_rs/",
         "className": "fa fa-instagram"
+      }
+    ]
+  },
+  "engineeringImpact": {
+    "achievements": [
+      {
+        "icon": "FaRocket",
+        "title": "Java 8 → Java 11 Migration",
+        "metric": "16 Services",
+        "description": "Led the end-to-end migration of 16 microservices from Java 8 to Java 11 at BI-Worldwide, modernizing the stack and improving JVM performance."
       },
       {
-        "name": "Facebook",
-        "url": "https://www.facebook.com/nirmal.andrew.3/",
-        "className": "fa fa-facebook"
+        "icon": "FaChartLine",
+        "title": "API Performance Optimization",
+        "metric": "40% Faster",
+        "description": "Optimized critical RESTful APIs using Spring Boot and Hibernate, reducing average response times by 40% through query tuning and caching strategies."
+      },
+      {
+        "icon": "FaShieldAlt",
+        "title": "SOX Compliance System",
+        "metric": "Enterprise Grade",
+        "description": "Designed and built audit-trail mechanisms and SOX-compliant data pipelines ensuring regulatory compliance for financial reporting workflows."
+      },
+      {
+        "icon": "FaLayerGroup",
+        "title": "Microservices Architecture",
+        "metric": "10+ Services",
+        "description": "Architected and delivered event-driven microservices using Spring Boot, IBM BPM/BAW, and REST APIs integrated with MySQL and Oracle databases."
+      },
+      {
+        "icon": "FaCode",
+        "title": "Open Source Packages",
+        "metric": "3 NPM Packages",
+        "description": "Published 3 NPM packages for React Native and React.js, addressing real-world image loading and UI component needs used by developers worldwide."
+      },
+      {
+        "icon": "FaUsers",
+        "title": "Freelance Delivery",
+        "metric": "50+ Projects",
+        "description": "Delivered 50+ freelance projects on Fiverr and Upwork with 5-star ratings, covering React, Node.js, React Native, MongoDB, and GraphQL stacks."
+      }
+    ]
+  },
+  "technicalExpertise": {
+    "categories": [
+      {
+        "category": "Frontend",
+        "icon": "FaReact",
+        "skills": ["React.js", "Vue.js", "JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "GraphQL"]
+      },
+      {
+        "category": "Backend",
+        "icon": "FaServer",
+        "skills": ["Java 11", "Spring Boot", "Node.js", "Express.js", "REST APIs", "IBM BPM/BAW", "JSP"]
+      },
+      {
+        "category": "Databases",
+        "icon": "FaDatabase",
+        "skills": ["MySQL", "MongoDB", "Oracle", "DynamoDB", "PostgreSQL"]
+      },
+      {
+        "category": "DevOps & Cloud",
+        "icon": "FaCloud",
+        "skills": ["AWS", "Docker", "CI/CD", "Linux", "Nginx"]
+      },
+      {
+        "category": "Tools",
+        "icon": "FaTools",
+        "skills": ["Git", "Webpack", "Postman", "JIRA", "Maven", "Hibernate"]
+      }
+    ]
+  },
+  "architectureProjects": {
+    "projects": [
+      {
+        "name": "Enterprise Microservices Migration Platform",
+        "architecture": "Event-driven microservices with IBM BPM/BAW orchestration and Spring Boot REST APIs",
+        "techStack": ["Java 11", "Spring Boot", "IBM BPM", "MySQL", "Oracle", "REST APIs"],
+        "challenges": "Migrating legacy monolithic services to 10+ independent microservices while maintaining zero downtime and backward compatibility across 3 client integrations.",
+        "outcome": "Achieved 40% improvement in deployment frequency and enabled independent scaling of critical services, reducing system-wide failures."
+      },
+      {
+        "name": "SOX Compliance Audit Pipeline",
+        "architecture": "Automated audit trail system with event sourcing and immutable log storage for financial data integrity",
+        "techStack": ["Java", "Spring Boot", "Hibernate", "MySQL", "REST APIs"],
+        "challenges": "Building a tamper-proof, audit-compliant logging system that captured all data mutations without impacting production throughput.",
+        "outcome": "Achieved full SOX compliance for financial workflows, passing enterprise-level security audits with zero violations."
+      },
+      {
+        "name": "Full-Stack E-Commerce Platform",
+        "architecture": "MERN stack single-page application with GraphQL API gateway and JWT-based authentication",
+        "techStack": ["React.js", "Node.js", "MongoDB", "GraphQL", "Express.js", "AWS"],
+        "challenges": "Designing a scalable product catalog with real-time inventory updates, cart synchronization, and secure payment flows.",
+        "outcome": "Delivered a production-ready platform serving 500+ concurrent users with sub-200ms API response times."
+      }
+    ]
+  },
+  "caseStudies": {
+    "studies": [
+      {
+        "title": "Java 8 → Java 11 Migration at BI-Worldwide",
+        "problem": "16 legacy services running on Java 8 with EOL risks, performance limitations, and incompatibility with modern libraries. Tight production schedule with zero tolerance for downtime.",
+        "solution": "Designed a phased migration strategy: service-by-service upgrade using feature flags, parallel deployment, and automated regression testing pipelines.",
+        "architecture": "Canary deployments with Spring Boot 2.x, modular dependency upgrades, and automated CI/CD pipelines using Maven and Jenkins.",
+        "impact": "Completed migration of all 16 services in 4 sprints. Improved build times by 30%, eliminated Java 8 EOL security risk, and unlocked access to modern Java APIs."
+      },
+      {
+        "title": "API Performance Optimization for Client Dashboard",
+        "problem": "Client-facing dashboard API endpoints averaging 800ms+ response times causing poor UX and user drop-off during peak traffic.",
+        "solution": "Profiled bottlenecks using JProfiler, rewrote N+1 Hibernate queries with batch fetching, introduced Redis caching for frequently-accessed data, and added database indexes.",
+        "architecture": "Spring Boot service layer with Hibernate second-level cache, Redis cache aside pattern, and optimized SQL queries with EXPLAIN analysis.",
+        "impact": "Reduced average API response time from 800ms to under 200ms — a 75% improvement — with no schema-breaking changes to existing clients."
       }
     ]
   },
   "resume": {
-    "skillmessage": "Core technologies and tools I work with across backend, frontend, databases, and DevOps.",
+    "skillmessage": "Specialized in enterprise Java, cloud-native microservices, and modern frontend development.",
     "education": [
       {
         "school": "University of Madras",
         "degree": "MBA Finance",
         "graduated": "Jan 2022",
-        "description": "Completed with a cumulative GPA of 7.1"
+        "description": "Completed with a cumulative GPA of 7.1. Developed strong foundations in financial analysis, business strategy, and enterprise management."
       },
       {
         "school": "TJS Engineering College",
-        "degree": "Bachelor Degree in Electrical and Electronics Engineering",
+        "degree": "Bachelor of Engineering — Electrical & Electronics",
         "graduated": "May 2019",
-        "description": "Completed with a cumulative GPA of 7.14"
+        "description": "Completed with a cumulative GPA of 7.14. Core coursework in electronics, systems design, and programming fundamentals."
       }
     ],
     "work": [
       {
-        "company": "Excelencia ITech Consulting",
-        "title": "Senior Software Engineer",
-        "years": "Feb 2023 – Present",
-        "description": "Architected and delivered enterprise-grade full-stack features across Java Spring Boot microservices and React frontends. Led migration of 16 legacy services to Java 11, reducing technical debt and improving system reliability. Designed RESTful APIs with Spring Security, optimized Hibernate query performance, and drove production debugging for high-traffic systems. Collaborated cross-functionally with product, QA, and infrastructure teams to ship scalable, maintainable solutions."
-      },
-      {
-        "company": "BI Worldwide",
+        "company": "BI-Worldwide",
         "title": "Software Engineer",
-        "years": "Oct 2020 – Jan 2023",
-        "description": "Developed and maintained client-driven enhancements using JSP, SQL, and Hibernate across a distributed reward and recognition platform. Built responsive React.js UIs and Express.js APIs integrated with Java Spring Boot services. Contributed to performance tuning initiatives that reduced API response times by 40%. Participated in architecture reviews and drove adoption of CI/CD best practices."
+        "years": "Feb 2023 – Present",
+        "description": "Led migration of 16 services to Java 11. Built client-driven enhancements using JSP, SQL, and Hibernate. Developed and optimized RESTful APIs and responsive UIs with React.js, Express.js, and Java Spring Boot. Designed SOX-compliant audit systems and implemented performance-critical data pipelines."
       },
       {
         "company": "Thirdware Solutions",
         "title": "Software Engineer",
-        "years": "Dec 2019 – Sep 2020",
-        "description": "Designed and implemented business process workflows using IBM BPM/BAW (v8.5, v8.6). Built RESTful APIs and UI Coaches with Java 8, Spring Boot, and Microservices architecture. Integrated MySQL and Oracle databases with Spring Security for secure, role-based access. Delivered automated process solutions that reduced manual intervention across enterprise workflows."
+        "years": "Oct 2020 – Jan 2023",
+        "description": "Built microservices with Java 8 and Spring Boot. Designed business processes on IBM BPM/BAW 8.5/8.6. Created RESTful APIs, UI Coaches, and integrated MySQL/Oracle databases with Spring Security. Worked on event-driven architectures and enterprise workflow automation."
       },
       {
-        "company": "Freelancer – Fiverr / Upwork",
+        "company": "Freelancer — Fiverr / Upwork",
         "title": "Full Stack Engineer",
         "years": "Dec 2019 – Present",
-        "description": "Delivered 20+ freelance projects including e-commerce platforms, REST APIs, and mobile applications using React, React Native, Node.js, and MongoDB. Maintained 5-star ratings on Fiverr and Upwork through consistent on-time delivery and high-quality code."
-      }
-    ],
-    "skillGroups": [
-      {
-        "category": "Backend",
-        "skills": ["Java", "Spring Boot", "Node.js", "Microservices", "Hibernate", "REST APIs", "GraphQL"]
-      },
-      {
-        "category": "Frontend",
-        "skills": ["React", "React Native", "Vue.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Bootstrap"]
-      },
-      {
-        "category": "Databases",
-        "skills": ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "Oracle", "Redis"]
-      },
-      {
-        "category": "DevOps & Cloud",
-        "skills": ["Docker", "AWS", "CI/CD", "Git", "GitHub Actions"]
-      },
-      {
-        "category": "Tools & Platforms",
-        "skills": ["Postman", "Grafana", "IBM BPM/BAW", "Jira", "Webpack"]
+        "description": "Delivered 50+ projects for global clients. Specializations include React.js, React Native, Node.js, MongoDB, GraphQL, and AWS deployments. Maintained 5-star ratings across multiple platforms."
       }
     ],
     "skills": [
-      { "name": "Java", "level": "95%" },
-      { "name": "Spring Boot", "level": "90%" },
-      { "name": "Node.js", "level": "95%" },
-      { "name": "React", "level": "90%" },
-      { "name": "Microservices", "level": "88%" },
-      { "name": "MySQL", "level": "90%" },
+      { "name": "Java / Spring Boot", "level": "95%" },
+      { "name": "React.js", "level": "90%" },
+      { "name": "Node.js", "level": "90%" },
+      { "name": "GraphQL", "level": "85%" },
+      { "name": "MySQL / Oracle", "level": "90%" },
+      { "name": "AWS / Docker", "level": "85%" },
       { "name": "MongoDB", "level": "90%" },
-      { "name": "Docker", "level": "85%" },
-      { "name": "AWS", "level": "85%" },
-      { "name": "GraphQL", "level": "88%" },
-      { "name": "Git", "level": "95%" },
-      { "name": "DynamoDB", "level": "85%" }
+      { "name": "IBM BPM/BAW", "level": "80%" }
     ]
   },
   "npm": {
     "package": [
       {
         "title": "react-native-img-placeholder",
-        "description": "A React Native image component that displays a placeholder while the network image is loading, with support for custom placeholder sources.",
+        "description": "React Native image component with placeholder support while loading network images. Handles loading states gracefully.",
         "link": "https://www.npmjs.com/package/react-native-img-placeholder"
       },
       {
         "title": "react-native-text-thumbnail",
-        "description": "Generates a text-based avatar thumbnail (2-character initials) for use when a user profile image is unavailable.",
+        "description": "Generates avatar-style text thumbnails (2-character initials) for users without profile images in React Native apps.",
         "link": "https://www.npmjs.com/package/react-native-text-thumbnail"
       },
       {
         "title": "loadlazy",
-        "description": "A lightweight lazy-load image library for React.js that enables performant image galleries with deferred loading.",
+        "description": "Lazy-load image library for React.js. Create responsive lazy-loading galleries with minimal configuration.",
         "link": "https://www.npmjs.com/package/loadlazy"
       }
     ]
@@ -139,91 +215,78 @@
   "portfolio": {
     "projects": [
       {
-        "title": "Bus Ticket Management System",
-        "category": "Full Stack Application",
-        "description": "End-to-end bus ticketing platform with seat selection, booking management, and admin dashboard. Built with AngularJS frontend and Java Spring Boot REST APIs backed by MySQL.",
-        "techStack": ["AngularJS", "Java", "Spring Boot", "MySQL"],
-        "image": "bus.jpg",
-        "url": "https://github.com/Ragavanrs/bus-ticket",
-        "github": "https://github.com/Ragavanrs/bus-ticket"
-      },
-      {
-        "title": "Gender Bias in STEM – Data Visualization",
-        "category": "Data Analytics",
-        "description": "Interactive Tableau dashboard analyzing gender representation trends across science and technology fields using public census datasets. Highlights key disparities across regions and time periods.",
-        "techStack": ["Tableau", "MySQL", "Data Analysis"],
+        "title": "Gender Bias in Science & Tech",
+        "category": "Data Visualization",
+        "description": "Interactive Tableau dashboard analyzing gender bias trends across science and technical fields using MySQL data pipelines.",
         "image": "population.jpeg",
+        "techStack": ["Tableau", "MySQL"],
         "url": "https://skill-lync.com/student-projects/project-2-gender-bias-in-science-and-technical-field-693",
         "github": ""
       },
       {
         "title": "Education Trends in Tamil Nadu",
-        "category": "Data Analytics",
-        "description": "Power BI report analyzing school enrollment, dropout rates, and infrastructure metrics across Tamil Nadu districts. Surfaces actionable insights for policy decision-making.",
-        "techStack": ["Power BI", "MySQL", "Excel"],
+        "category": "Business Intelligence",
+        "description": "Power BI dashboard analyzing education enrollment and performance trends across districts in Tamil Nadu using real census data.",
         "image": "powerbi.png",
+        "techStack": ["Power BI", "MySQL"],
         "url": "https://skill-lync.com/student-projects/project-1-analyzing-the-education-trends-in-tamilnadu-735",
         "github": ""
       },
       {
-        "title": "Advanced Excel Analytics Dashboard",
-        "category": "Data Analytics",
-        "description": "Complex Excel workbook integrating database connections, pivot tables, conditional logic, and dynamic charts for enterprise-level financial and operational reporting.",
-        "techStack": ["Excel", "VBA", "MySQL"],
+        "title": "Advanced Excel Analytics",
+        "category": "Data Analysis",
+        "description": "Excel-based analytics project with database integration, Pivot Tables, conditional analysis, and automated reporting dashboards.",
         "image": "excel.png",
+        "techStack": ["Excel", "SQL"],
         "url": "https://skill-lync.com/student-projects/project-2-4230",
         "github": ""
+      },
+      {
+        "title": "Bus Ticket Management System",
+        "category": "Full Stack Web App",
+        "description": "Full-stack bus ticket booking platform with AngularJS frontend and Java/SQL backend. Supports seat selection and booking management.",
+        "image": "bus.jpg",
+        "techStack": ["AngularJS", "Java", "SQL"],
+        "url": "https://github.com/Ragavanrs/bus-ticket",
+        "github": "https://github.com/Ragavanrs/bus-ticket"
       }
-    ],
-    "aiProjects": [
+    ]
+  },
+  "blog": {
+    "posts": [
       {
-        "title": "DevIntellect – AI Engineering Intelligence Platform",
-        "category": "AI / Developer Tooling",
-        "description": "AI-powered platform that analyzes Git repositories to help developers detect root causes, visualize code impact, and understand technical dependencies. Integrates with GitHub API to surface commit-level intelligence and developer productivity insights.",
-        "techStack": ["React", "Node.js", "Gemini API", "OpenAI", "GitHub API"],
-        "image": "",
-        "url": "",
-        "github": "https://github.com/Ragavanrs",
-        "features": ["Root cause analysis", "Dependency visualization", "Commit impact detection", "Developer productivity insights"]
+        "title": "Java 8 to Java 11: Lessons from Migrating 16 Microservices",
+        "description": "Key challenges, strategies, and lessons from leading a production Java migration covering 16 services — zero downtime, backward compatibility, and modern API adoption.",
+        "link": "#"
       },
       {
-        "title": "AI Log Root Cause Analyzer",
-        "category": "AI / DevOps",
-        "description": "Intelligent log analysis tool that ingests system logs and leverages AI to identify recurring error patterns, pinpoint root causes, and recommend automated fixes. Reduces mean time to resolution (MTTR) for production incidents.",
-        "techStack": ["Node.js", "OpenAI API", "React", "Docker"],
-        "image": "",
-        "url": "",
-        "github": "https://github.com/Ragavanrs",
-        "features": ["Log pattern analysis", "Error detection", "Automated debugging suggestions", "MTTR reduction"]
+        "title": "SOX Compliance for Java Engineers: What You Actually Need to Know",
+        "description": "Practical guide to designing audit-compliant systems in Java Spring Boot — covering event sourcing, immutable audit logs, and what SOX actually requires from your code.",
+        "link": "#"
       },
       {
-        "title": "AI Code Impact Analyzer",
-        "category": "AI / Developer Tooling",
-        "description": "Analyzes Git commits and statically maps downstream impact across microservices using AI-assisted dependency graph traversal. Generates automated impact reports to reduce risk during deployments.",
-        "techStack": ["React", "Node.js", "GitHub API", "AI APIs", "Graph Analysis"],
-        "image": "",
-        "url": "",
-        "github": "https://github.com/Ragavanrs",
-        "features": ["Dependency graph analysis", "Change risk detection", "Automated impact reporting", "Multi-service tracing"]
+        "title": "GraphQL vs REST: When to Use Each in Production",
+        "description": "Comparing GraphQL and REST from real production experience — when each shines, how to avoid common traps, and hybrid strategies that work.",
+        "link": "#"
       }
     ]
   },
   "testimonials": {
     "testimonials": [
       {
-        "text": "Nirmal did an amazing job and delivered much faster than expected! He understood the requirements immediately and started work right away. I would definitely hire him again for any programming job.",
-        "user": "Wesley – Fiverr"
+        "text": "Nirmal did an amazing job and delivered this much faster than expected! I would definitely hire him again for any programming job. He understood the requirements immediately and started to work on it right away.",
+        "user": "Wesley — Fiverr Client"
       },
       {
-        "text": "Great developer to work with. Very professional and time-sensitive. I will keep working with him long-term!",
-        "user": "JinhRomeo1 – Fiverr"
+        "text": "Great developer to work with. Very professional and time sensitive. I will keep working with him for long term!",
+        "user": "JinhRomeo — Fiverr Client"
       },
       {
-        "text": "Nirmal successfully delivered an online store using React, MongoDB, and Node.js. He listened to every update request and applied changes quickly. I would definitely recommend him.",
+        "text": "Nirmal successfully delivered an online store using ReactJs, MongoDB, and NodeJs. He was able to listen and apply any updates or changes to the website. I was happy working with him!",
         "user": "Upwork Client"
       },
       {
-        "text": "Great job. Solid React Native skills and excellent communication throughout the project.",
+        "text": "Great job. Solid React Native skills.",
         "user": "Hydrameet Founder"
       }
     ]

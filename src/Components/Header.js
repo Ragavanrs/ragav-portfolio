@@ -2,18 +2,12 @@ import React, { Component } from 'react';
 
 class Header extends Component {
   render() {
-    let name = '';
-    let occupation = '';
-    let description = '';
-    let city = '';
-    let networks = null;
-
     if (this.props.data) {
-      name = this.props.data.name;
-      occupation = this.props.data.occupation;
-      description = this.props.data.description;
-      city = this.props.data.address.city;
-      networks = this.props.data.social.map(function (network) {
+      var name = this.props.data.name;
+      var occupation = this.props.data.occupation;
+      var description = this.props.data.description;
+      var resumeDownload = this.props.data.resumedownload;
+      var networks = this.props.data.social.map(function (network) {
         return (
           <li key={network.name}>
             <a target="_blank" rel="noopener noreferrer" href={network.url}>
@@ -29,24 +23,30 @@ class Header extends Component {
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
           <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
+
           <ul id="nav" className="nav">
             <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
+            <li><a className="smoothscroll" href="#impact">Impact</a></li>
+            <li><a className="smoothscroll" href="#expertise">Skills</a></li>
             <li><a className="smoothscroll" href="#about">About</a></li>
             <li><a className="smoothscroll" href="#resume">Resume</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Projects</a></li>
-            <li><a className="smoothscroll" href="#npm">Open Source</a></li>
-            <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
+            <li><a className="smoothscroll" href="#portfolio">Works</a></li>
+            <li><a className="smoothscroll" href="#npm">Packages</a></li>
             <li><a className="smoothscroll" href="#contact">Contact</a></li>
           </ul>
         </nav>
 
         <div className="row banner">
           <div className="banner-text">
-            <h1 className="responsive-headline">I'm {name}.</h1>
-            <h3>
-              {city} based <span>{occupation}</span>. {description}
-            </h3>
+            <h1 className="responsive-headline">Hi, I'm {name}.</h1>
+            <h3 className="hero-occupation">{occupation}</h3>
+            <p className="hero-description">{description}</p>
             <hr />
+            <div className="hero-cta">
+              <a className="smoothscroll button hero-btn btn-primary" href="#portfolio">View Projects</a>
+              <a className="button hero-btn btn-secondary" href={resumeDownload} download>Download Resume</a>
+              <a className="smoothscroll button hero-btn btn-outline" href="#contact">Contact Me</a>
+            </div>
             <ul className="social">
               {networks}
             </ul>
@@ -54,7 +54,7 @@ class Header extends Component {
         </div>
 
         <p className="scrolldown">
-          <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
+          <a className="smoothscroll" href="#impact"><i className="icon-down-circle"></i></a>
         </p>
       </header>
     );

@@ -1,0 +1,698 @@
+/* ===================================================
+   Modern Portfolio CSS — Additional Styles
+   =================================================== */
+
+/* ---- CSS Variables ---- */
+:root {
+  --primary: #11ABB0;
+  --primary-dark: #0D8A8E;
+  --dark-bg: #1a1a2e;
+  --card-bg: #16213e;
+  --card-border: #0f3460;
+  --text-light: #c8d6e5;
+  --text-muted: #8395a7;
+  --accent: #e94560;
+  --white: #ffffff;
+  --radius: 12px;
+  --shadow: 0 8px 32px rgba(0,0,0,0.3);
+  --transition: all 0.3s ease;
+}
+
+/* ---- Hero CTA Buttons ---- */
+.hero-occupation {
+  font-size: 1.4em;
+  color: var(--primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.hero-description {
+  font-size: 1.05em;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto 20px;
+  line-height: 1.8;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white) !important;
+  border: 2px solid var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white) !important;
+  border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary) !important;
+  border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: var(--white) !important;
+  transform: translateY(-2px);
+}
+
+/* ---- Section Common Styles ---- */
+.section-title {
+  font-size: 2.2em;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.05em;
+  margin-bottom: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===================================================
+   ENGINEERING IMPACT SECTION
+   =================================================== */
+.section-impact {
+  background: var(--dark-bg);
+  padding: 80px 0;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.impact-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.impact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.impact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+  border-color: var(--primary);
+}
+
+.impact-card:hover::before {
+  opacity: 1;
+}
+
+.impact-icon {
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.impact-metric {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.impact-title {
+  font-size: 1em;
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.impact-description {
+  color: var(--text-muted);
+  font-size: 0.9em;
+  line-height: 1.7;
+}
+
+/* ===================================================
+   TECHNICAL EXPERTISE SECTION
+   =================================================== */
+.section-expertise {
+  background: #0f0f1a;
+  padding: 80px 0;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.expertise-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  transition: var(--transition);
+}
+
+.expertise-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(17, 171, 176, 0.2);
+}
+
+.expertise-icon {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.expertise-category {
+  font-size: 1em;
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: rgba(17, 171, 176, 0.15);
+  color: var(--primary);
+  border: 1px solid rgba(17, 171, 176, 0.3);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.78em;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.skill-tag:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* ===================================================
+   ARCHITECTURE PROJECTS SECTION
+   =================================================== */
+.section-architecture {
+  background: var(--dark-bg);
+  padding: 80px 0;
+}
+
+.arch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.arch-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: var(--transition);
+}
+
+.arch-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+
+.arch-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.arch-icon {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.arch-name {
+  font-size: 1.15em;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.arch-architecture {
+  color: var(--text-light);
+  font-size: 0.9em;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.arch-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  background: rgba(233, 69, 96, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(233, 69, 96, 0.3);
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-size: 0.78em;
+  font-weight: 500;
+}
+
+.arch-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.arch-detail-block h4 {
+  font-size: 0.8em;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.arch-detail-block p {
+  color: var(--text-muted);
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+/* ===================================================
+   PORTFOLIO SECTION
+   =================================================== */
+.section-portfolio {
+  background: #0f0f1a;
+  padding: 80px 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.portfolio-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+  border-color: var(--primary);
+}
+
+.portfolio-card-image {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.portfolio-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover .portfolio-card-image img {
+  transform: scale(1.08);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(17, 171, 176, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay-links {
+  display: flex;
+  gap: 20px;
+}
+
+.portfolio-overlay-links a {
+  color: var(--white);
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.portfolio-overlay-links a:hover {
+  background: rgba(0,0,0,0.6);
+  transform: scale(1.1);
+}
+
+.portfolio-card-content {
+  padding: 20px;
+}
+
+.portfolio-category {
+  font-size: 0.75em;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.portfolio-title {
+  font-size: 1em;
+  color: var(--white);
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.portfolio-description {
+  color: var(--text-muted);
+  font-size: 0.85em;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.portfolio-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.portfolio-tech-tag {
+  background: rgba(17, 171, 176, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(17, 171, 176, 0.25);
+  border-radius: 3px;
+  padding: 2px 8px;
+  font-size: 0.72em;
+  font-weight: 500;
+}
+
+/* ===================================================
+   CASE STUDIES SECTION
+   =================================================== */
+.section-casestudies {
+  background: var(--dark-bg);
+  padding: 80px 0;
+}
+
+.case-studies-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.case-study-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 36px;
+  transition: var(--transition);
+}
+
+.case-study-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+.case-study-title {
+  font-size: 1.3em;
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.case-block {
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+}
+
+.case-problem {
+  background: rgba(233, 69, 96, 0.08);
+  border-left-color: var(--accent);
+}
+.case-solution {
+  background: rgba(17, 171, 176, 0.08);
+  border-left-color: var(--primary);
+}
+.case-architecture {
+  background: rgba(108, 92, 231, 0.08);
+  border-left-color: #6c5ce7;
+}
+.case-impact {
+  background: rgba(0, 184, 148, 0.08);
+  border-left-color: #00b894;
+}
+
+.case-block-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+.case-problem .case-block-header { color: var(--accent); }
+.case-solution .case-block-header { color: var(--primary); }
+.case-architecture .case-block-header { color: #6c5ce7; }
+.case-impact .case-block-header { color: #00b894; }
+
+.case-block p {
+  color: var(--text-muted);
+  font-size: 0.88em;
+  line-height: 1.7;
+}
+
+/* ===================================================
+   BLOG SECTION
+   =================================================== */
+.section-blog {
+  background: #0f0f1a;
+  padding: 80px 0;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.blog-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+.blog-icon {
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.blog-title {
+  font-size: 1.05em;
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.blog-description {
+  color: var(--text-muted);
+  font-size: 0.88em;
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.blog-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-size: 0.85em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.blog-link:hover {
+  color: var(--white);
+  gap: 12px;
+}
+
+/* ===================================================
+   RESPONSIVE
+   =================================================== */
+@media (max-width: 768px) {
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-btn {
+    width: 200px;
+    text-align: center;
+  }
+
+  .impact-grid,
+  .expertise-grid,
+  .arch-grid,
+  .portfolio-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+
+  .case-study-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .arch-details {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.7em;
+  }
+
+  .case-studies-container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-impact,
+  .section-expertise,
+  .section-architecture,
+  .section-portfolio,
+  .section-casestudies,
+  .section-blog {
+    padding: 60px 0;
+  }
+}
