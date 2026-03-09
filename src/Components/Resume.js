@@ -65,7 +65,9 @@ class Resume extends Component {
             <h2 className="pf-section-title">Education, Experience &amp; Skills</h2>
             <div className="pf-divider"></div>
             <p className="pf-section-desc">
-              5+ years building production systems across enterprise Java, cloud microservices, and modern frontend stacks.
+              {this.props.data && this.props.data.skillmessage
+                ? this.props.data.skillmessage
+                : '5+ years building production systems across enterprise Java, cloud microservices, and modern frontend stacks.'}
             </p>
           </div>
 

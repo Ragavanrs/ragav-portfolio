@@ -27,7 +27,11 @@ class App extends Component {
   getResumeData() {
     fetch('/resumeData.json')
       .then(response => response.json())
-      .then(data => this.setState({ resumeData: data }))
+      .then(data => {
+        // Re-initialise scroll animations after data loads so that cards
+        // rendered by the setState re-render are also observed.
+        this.setState({ resumeData: data }, () => this.initScrollAnimations());
+      })
       .catch(err => console.error('Failed to load resume data:', err));
   }
 
@@ -40,7 +44,7 @@ class App extends Component {
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
     );
     document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
       observer.observe(el);
@@ -49,8 +53,6 @@ class App extends Component {
 
   componentDidMount() {
     this.getResumeData();
-    // Run scroll animations after a short delay to let DOM render
-    setTimeout(() => this.initScrollAnimations(), 300);
   }
 
   render() {
