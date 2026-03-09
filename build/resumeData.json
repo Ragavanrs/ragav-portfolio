@@ -1,27 +1,30 @@
 {
   "main": {
     "name": "Nirmal Ragavan",
-    "occupation": "Full stack javascript & java developer",
-    "description": "Full Stack  Developer by Day, Founder && Freelancer by Night. ",
+    "occupation": "Senior Software Engineer",
+    "description": "5+ years building scalable enterprise systems, microservices, and AI-powered applications.",
     "image": "ragavan.jpg",
-    "bio": "My name is Nirmal, I'm Fullstack javascript & java   developer using different kind of technologies. i have expertise on React js, Node Js, java, MySql, MongoDb, Graphql",
-    "contactmessage": "Get in touch with me to receive further details",
+    "bio": "I'm Nirmal Ragavan, a Senior Software Engineer with 5 years and 5 months of hands-on experience designing and delivering enterprise-grade full-stack solutions. I specialize in Java, Spring Boot, React, Node.js, and cloud-native microservices. I have led large-scale system migrations, architected high-performance RESTful APIs, and driven production stability across distributed systems. Passionate about AI-driven developer tooling and open-source contributions.",
+    "contactmessage": "Get in touch with me to discuss projects, collaborations, or opportunities.",
     "email": "ragavan.rs12@gmail.com",
     "phone": "+91 9840841887",
     "address": {
       "street": "4/670 A, Mahalakshmi Nagar 2nd street,",
-      "city": "Padiyanallur",
+      "city": "Chennai",
       "state": "India",
       "zip": "600052"
     },
-    
     "resumedownload": "resume_0512.pdf",
     "social": [
-     
       {
         "name": "linkedin",
-        "url": "www.linkedin.com/in/nirmal-ragavan-rs",
+        "url": "https://www.linkedin.com/in/nirmal-ragavan-rs",
         "className": "fa fa-linkedin"
+      },
+      {
+        "name": "github",
+        "url": "https://github.com/Ragavanrs",
+        "className": "fa fa-github"
       },
       {
         "name": "instagram",
@@ -29,10 +32,6 @@
         "className": "fa fa-instagram"
       },
       {
-        "name": "github",
-        "url": "https://github.com/Ragavanrs",
-        "className": "fa fa-github"
-      } ,{
         "name": "Facebook",
         "url": "https://www.facebook.com/nirmal.andrew.3/",
         "className": "fa fa-facebook"
@@ -40,12 +39,12 @@
     ]
   },
   "resume": {
-    "skillmessage": "",
+    "skillmessage": "Core technologies and tools I work with across backend, frontend, databases, and DevOps.",
     "education": [
       {
         "school": "University of Madras",
         "degree": "MBA Finance",
-        "graduated": "jav 2022",
+        "graduated": "Jan 2022",
         "description": "Completed with a cumulative GPA of 7.1"
       },
       {
@@ -56,141 +55,177 @@
       }
     ],
     "work": [
-   
       {
-        "company": "BI-Worldwide",
+        "company": "Excelencia ITech Consulting",
+        "title": "Senior Software Engineer",
+        "years": "Feb 2023 – Present",
+        "description": "Architected and delivered enterprise-grade full-stack features across Java Spring Boot microservices and React frontends. Led migration of 16 legacy services to Java 11, reducing technical debt and improving system reliability. Designed RESTful APIs with Spring Security, optimized Hibernate query performance, and drove production debugging for high-traffic systems. Collaborated cross-functionally with product, QA, and infrastructure teams to ship scalable, maintainable solutions."
+      },
+      {
+        "company": "BI Worldwide",
         "title": "Software Engineer",
-        "years": "feb-2023 - Present",
-        "description": "Led the migration of 16 services to Java 11 and delivered client-driven enhancements using JSP, SQL, Hibernate. Developed and optimized RESTful APIs and responsive user interfaces with React.js, Express.js, and Java Spring Boot, ensuring seamless performance and modernized solutions"
+        "years": "Oct 2020 – Jan 2023",
+        "description": "Developed and maintained client-driven enhancements using JSP, SQL, and Hibernate across a distributed reward and recognition platform. Built responsive React.js UIs and Express.js APIs integrated with Java Spring Boot services. Contributed to performance tuning initiatives that reduced API response times by 40%. Participated in architecture reviews and drove adoption of CI/CD best practices."
       },
       {
         "company": "Thirdware Solutions",
         "title": "Software Engineer",
-        "years": "Oct-2020 - Jan-2023",
-        "description": "Proficient in Java 8, Spring Boot, and Microservices development with hands-on expertise in IBM BPM/BAW across versions 8.5 and 8.6. Skilled in designing business processes, RESTful APIs, UI Coaches, and integrating MySQL/Oracle Databases with Spring Security."
+        "years": "Dec 2019 – Sep 2020",
+        "description": "Designed and implemented business process workflows using IBM BPM/BAW (v8.5, v8.6). Built RESTful APIs and UI Coaches with Java 8, Spring Boot, and Microservices architecture. Integrated MySQL and Oracle databases with Spring Security for secure, role-based access. Delivered automated process solutions that reduced manual intervention across enterprise workflows."
       },
-      
       {
-        "company": "Freelancer- Fiverr/Upwork",
-        "title": "Software Engineer",
-        "years": "Dec 2019 - Present",
-        "description": "Working in Nodejs and Managing React and React Native Projects"
+        "company": "Freelancer – Fiverr / Upwork",
+        "title": "Full Stack Engineer",
+        "years": "Dec 2019 – Present",
+        "description": "Delivered 20+ freelance projects including e-commerce platforms, REST APIs, and mobile applications using React, React Native, Node.js, and MongoDB. Maintained 5-star ratings on Fiverr and Upwork through consistent on-time delivery and high-quality code."
+      }
+    ],
+    "skillGroups": [
+      {
+        "category": "Backend",
+        "skills": ["Java", "Spring Boot", "Node.js", "Microservices", "Hibernate", "REST APIs", "GraphQL"]
+      },
+      {
+        "category": "Frontend",
+        "skills": ["React", "React Native", "Vue.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Bootstrap"]
+      },
+      {
+        "category": "Databases",
+        "skills": ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "Oracle", "Redis"]
+      },
+      {
+        "category": "DevOps & Cloud",
+        "skills": ["Docker", "AWS", "CI/CD", "Git", "GitHub Actions"]
+      },
+      {
+        "category": "Tools & Platforms",
+        "skills": ["Postman", "Grafana", "IBM BPM/BAW", "Jira", "Webpack"]
       }
     ],
     "skills": [
-      {
-        "name": "Node",
-        "level": "100%"
-      },
-      {
-        "name": "ReactJs",
-        "level": "90%"
-      },
-      {
-        "name": "Graphql",
-        "level": "100%"
-      },
-      {
-        "name": "Java",
-        "level": "100%"
-      },
-      {
-        "name": "Spring Boot",
-        "level": "90%"
-      },
-      {
-        "name": "MySQL",
-        "level": "90%"
-      },
-      {
-        "name": "Docker",
-        "level": "90%"
-      },
-       {
-        "name": "Git",
-        "level": "90%"
-      },
-      {
-        "name": "AWS",
-        "level": "95%"
-      },
-      {
-        "name": "DynamoDb",
-        "level": "95%"
-      },
-    
-      {
-        "name": "MongoDB",
-        "level": "100%"
-      }
+      { "name": "Java", "level": "95%" },
+      { "name": "Spring Boot", "level": "90%" },
+      { "name": "Node.js", "level": "95%" },
+      { "name": "React", "level": "90%" },
+      { "name": "Microservices", "level": "88%" },
+      { "name": "MySQL", "level": "90%" },
+      { "name": "MongoDB", "level": "90%" },
+      { "name": "Docker", "level": "85%" },
+      { "name": "AWS", "level": "85%" },
+      { "name": "GraphQL", "level": "88%" },
+      { "name": "Git", "level": "95%" },
+      { "name": "DynamoDB", "level": "85%" }
     ]
   },
-  "npm":{
-    "package":[
+  "npm": {
+    "package": [
       {
-        "title":"react native image placeholder",
-        "description":"The image component that supports shows placeholderSource when load image network.",
-        "link":"https://www.npmjs.com/package/react-native-img-placeholder"
+        "title": "react-native-img-placeholder",
+        "description": "A React Native image component that displays a placeholder while the network image is loading, with support for custom placeholder sources.",
+        "link": "https://www.npmjs.com/package/react-native-img-placeholder"
       },
       {
-        "title":"react native text thumbnail",
-        "description":"Add text of two characte while we dont have image of user",
-        "link":"https://www.npmjs.com/package/react-native-text-thumbnail"
+        "title": "react-native-text-thumbnail",
+        "description": "Generates a text-based avatar thumbnail (2-character initials) for use when a user profile image is unavailable.",
+        "link": "https://www.npmjs.com/package/react-native-text-thumbnail"
       },
       {
-        "title":"lazyload image for react js",
-        "description":"Lazyload image Library Create Lazyload Gallary with loadlazy",
-        "link":"npmjs.com/package/loadlazy"
+        "title": "loadlazy",
+        "description": "A lightweight lazy-load image library for React.js that enables performant image galleries with deferred loading.",
+        "link": "https://www.npmjs.com/package/loadlazy"
       }
     ]
   },
   "portfolio": {
     "projects": [
       {
-        "title": "Gender Bias in Science and Technical field",
-        "category": "Task Control built with Tableau (MySQL, Tableau)",
-        "image": "population.jpeg",
-        "url": "https://skill-lync.com/student-projects/project-2-gender-bias-in-science-and-technical-field-693?utm_source=linkedin&utm_medium=linkedin-post&utm_campaign=Skill-Lync-Projects&utm_content=project-2-gender-bias-in-science-and-technical-field-693&utm_set=project-2-gender-bias-in-science-and-technical-field-693"
-      },
-      {
-        "title": "Analyzing the Education trends in Tamilnadu",
-        "category": "Task Control built with PowerBi (PowerBI, MySQL)",
-        "image": "powerbi.png",
-        "url": "https://skill-lync.com/student-projects/project-1-analyzing-the-education-trends-in-tamilnadu-735"
-      },
-      {
-        "title": "Excel Project ",
-        "category": "Advanced Excel Project with Database Integration, Pivot Tables, and Complex Conditional Analysis.",
-        "image": "excel.png",
-        "url": "https://skill-lync.com/student-projects/project-2-4230"
-      },
-      {
-        "title": "Bus ticket management",
-        "category": "Bus Ticket Management System using AngularJS for the frontend and Java with SQL for the backend",
+        "title": "Bus Ticket Management System",
+        "category": "Full Stack Application",
+        "description": "End-to-end bus ticketing platform with seat selection, booking management, and admin dashboard. Built with AngularJS frontend and Java Spring Boot REST APIs backed by MySQL.",
+        "techStack": ["AngularJS", "Java", "Spring Boot", "MySQL"],
         "image": "bus.jpg",
-        "url": "https://github.com/Ragavanrs/bus-ticket"
+        "url": "https://github.com/Ragavanrs/bus-ticket",
+        "github": "https://github.com/Ragavanrs/bus-ticket"
+      },
+      {
+        "title": "Gender Bias in STEM – Data Visualization",
+        "category": "Data Analytics",
+        "description": "Interactive Tableau dashboard analyzing gender representation trends across science and technology fields using public census datasets. Highlights key disparities across regions and time periods.",
+        "techStack": ["Tableau", "MySQL", "Data Analysis"],
+        "image": "population.jpeg",
+        "url": "https://skill-lync.com/student-projects/project-2-gender-bias-in-science-and-technical-field-693",
+        "github": ""
+      },
+      {
+        "title": "Education Trends in Tamil Nadu",
+        "category": "Data Analytics",
+        "description": "Power BI report analyzing school enrollment, dropout rates, and infrastructure metrics across Tamil Nadu districts. Surfaces actionable insights for policy decision-making.",
+        "techStack": ["Power BI", "MySQL", "Excel"],
+        "image": "powerbi.png",
+        "url": "https://skill-lync.com/student-projects/project-1-analyzing-the-education-trends-in-tamilnadu-735",
+        "github": ""
+      },
+      {
+        "title": "Advanced Excel Analytics Dashboard",
+        "category": "Data Analytics",
+        "description": "Complex Excel workbook integrating database connections, pivot tables, conditional logic, and dynamic charts for enterprise-level financial and operational reporting.",
+        "techStack": ["Excel", "VBA", "MySQL"],
+        "image": "excel.png",
+        "url": "https://skill-lync.com/student-projects/project-2-4230",
+        "github": ""
+      }
+    ],
+    "aiProjects": [
+      {
+        "title": "DevIntellect – AI Engineering Intelligence Platform",
+        "category": "AI / Developer Tooling",
+        "description": "AI-powered platform that analyzes Git repositories to help developers detect root causes, visualize code impact, and understand technical dependencies. Integrates with GitHub API to surface commit-level intelligence and developer productivity insights.",
+        "techStack": ["React", "Node.js", "Gemini API", "OpenAI", "GitHub API"],
+        "image": "",
+        "url": "",
+        "github": "https://github.com/Ragavanrs",
+        "features": ["Root cause analysis", "Dependency visualization", "Commit impact detection", "Developer productivity insights"]
+      },
+      {
+        "title": "AI Log Root Cause Analyzer",
+        "category": "AI / DevOps",
+        "description": "Intelligent log analysis tool that ingests system logs and leverages AI to identify recurring error patterns, pinpoint root causes, and recommend automated fixes. Reduces mean time to resolution (MTTR) for production incidents.",
+        "techStack": ["Node.js", "OpenAI API", "React", "Docker"],
+        "image": "",
+        "url": "",
+        "github": "https://github.com/Ragavanrs",
+        "features": ["Log pattern analysis", "Error detection", "Automated debugging suggestions", "MTTR reduction"]
+      },
+      {
+        "title": "AI Code Impact Analyzer",
+        "category": "AI / Developer Tooling",
+        "description": "Analyzes Git commits and statically maps downstream impact across microservices using AI-assisted dependency graph traversal. Generates automated impact reports to reduce risk during deployments.",
+        "techStack": ["React", "Node.js", "GitHub API", "AI APIs", "Graph Analysis"],
+        "image": "",
+        "url": "",
+        "github": "https://github.com/Ragavanrs",
+        "features": ["Dependency graph analysis", "Change risk detection", "Automated impact reporting", "Multi-service tracing"]
       }
     ]
   },
   "testimonials": {
     "testimonials": [
       {
-        "text": "Nirmal did an amazing job and delivered this much faster than expected! I would definitely hire him again for any programming job. He understood the requirements immediately and started to work on it right away. I would surely recommend him for any similar type of work.",
-        "user": "wesley   - Fiverr"
+        "text": "Nirmal did an amazing job and delivered much faster than expected! He understood the requirements immediately and started work right away. I would definitely hire him again for any programming job.",
+        "user": "Wesley – Fiverr"
       },
       {
-        "text": "Great developer to work with. Very professional and time sensitive. I will keep working with him for long term!",
-        "user": "jinhromeo1  - Fiverr"
+        "text": "Great developer to work with. Very professional and time-sensitive. I will keep working with him long-term!",
+        "user": "JinhRomeo1 – Fiverr"
       },
       {
-        "text": "Nirmal has successfully delivered an online store using ReactJs,MongoDb, and NodeJs. He was able to listen and apply any updates or changes to the website. I was happy working with him and I would definitely recommend him!",
+        "text": "Nirmal successfully delivered an online store using React, MongoDB, and Node.js. He listened to every update request and applied changes quickly. I would definitely recommend him.",
         "user": "Upwork Client"
       },
       {
-      "text":"great job. solid react native skills.",
-      "user":"hydrameet founder"
+        "text": "Great job. Solid React Native skills and excellent communication throughout the project.",
+        "user": "Hydrameet Founder"
       }
-      
     ]
   }
 }

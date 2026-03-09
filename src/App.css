@@ -1,0 +1,130 @@
+/* ===================================================
+   Portfolio – Custom Styles (complementing Bootstrap)
+   =================================================== */
+
+/* Section headings */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #0d6efd;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.section-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0d6efd;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #0d6efd;
+  padding-bottom: 0.3rem;
+}
+
+/* ---- Portfolio Cards ---- */
+.portfolio-card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.portfolio-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-card-img-wrap img {
+  transition: transform 0.35s ease;
+}
+.portfolio-card:hover .portfolio-card-img-wrap img {
+  transform: scale(1.05);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 110, 253, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* ---- AI Project Cards ---- */
+.ai-card {
+  border: 1px solid #e0cffc !important;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f5ff 0%, #fff 100%);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.ai-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(102, 16, 242, 0.18) !important;
+}
+.ai-card-header {
+  border-bottom: 1px solid #e0cffc;
+  background: rgba(102, 16, 242, 0.04);
+}
+
+/* ---- Work Experience ---- */
+.work-item {
+  transition: box-shadow 0.2s ease;
+}
+.work-item:hover {
+  box-shadow: 0 4px 16px rgba(13, 110, 253, 0.1);
+}
+
+/* ---- Section spacing (for non-Bootstrap sections) ---- */
+#portfolio,
+#resume {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#resume {
+  background: #f8f9fc;
+}
+
+/* ---- Section divider ---- */
+.section-divider {
+  border-top: 2px dashed #e0cffc;
+  padding-top: 2rem;
+}
+
+/* ---- Responsive tweaks ---- */
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .portfolio-card-img-wrap img {
+    height: 150px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ai-icon {
+    margin-bottom: 0.5rem;
+    margin-right: 0 !important;
+  }
+}
