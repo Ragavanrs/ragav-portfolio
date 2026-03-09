@@ -4,6 +4,7 @@
  "private": true,
  "dependencies": {
   "babel-loader": "^9.2.1",
+  "bootstrap": "^5.3.3",
   "framer-motion": "^10.18.0",
   "jquery": "^3.5.1",
   "react": "^16.13.1",
