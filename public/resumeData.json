@@ -15,7 +15,7 @@
       "state": "India",
       "zip": "600052"
     },
-    "resumedownload": "resume_0512.pdf",
+    "resumedownload": "NirmalRagavan.pdf",
     "social": [
       {
         "name": "linkedin",
@@ -59,12 +59,6 @@
         "title": "Microservices Architecture",
         "metric": "10+ Services",
         "description": "Architected and delivered event-driven microservices using Spring Boot, IBM BPM/BAW, and REST APIs integrated with MySQL and Oracle databases."
-      },
-      {
-        "icon": "FaCode",
-        "title": "Open Source Packages",
-        "metric": "3 NPM Packages",
-        "description": "Published 3 NPM packages for React Native and React.js, addressing real-world image loading and UI component needs used by developers worldwide."
       },
       {
         "icon": "FaUsers",
@@ -164,9 +158,15 @@
     ],
     "work": [
       {
+        "company": "Excelencia ITech Consulting",
+        "title": "Senior Software Engineer",
+        "years": "Jul 2025 – Present",
+        "description": "Owned end-to-end design, development, and production support of 10+ enterprise web application modules using Java, Spring Boot, and Vue, improving system throughput by 30% and increasing release stability across bi-weekly deployments."
+      },
+      {
         "company": "BI-Worldwide",
         "title": "Software Engineer",
-        "years": "Feb 2023 – Present",
+        "years": "Feb 2023 – Jun 2025",
         "description": "Led migration of 16 services to Java 11. Built client-driven enhancements using JSP, SQL, and Hibernate. Developed and optimized RESTful APIs and responsive UIs with React.js, Express.js, and Java Spring Boot. Designed SOX-compliant audit systems and implemented performance-critical data pipelines."
       },
       {
@@ -194,23 +194,7 @@
     ]
   },
   "npm": {
-    "package": [
-      {
-        "title": "react-native-img-placeholder",
-        "description": "React Native image component with placeholder support while loading network images. Handles loading states gracefully.",
-        "link": "https://www.npmjs.com/package/react-native-img-placeholder"
-      },
-      {
-        "title": "react-native-text-thumbnail",
-        "description": "Generates avatar-style text thumbnails (2-character initials) for users without profile images in React Native apps.",
-        "link": "https://www.npmjs.com/package/react-native-text-thumbnail"
-      },
-      {
-        "title": "loadlazy",
-        "description": "Lazy-load image library for React.js. Create responsive lazy-loading galleries with minimal configuration.",
-        "link": "https://www.npmjs.com/package/loadlazy"
-      }
-    ]
+    "package": []
   },
   "portfolio": {
     "projects": [
